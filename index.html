@@ -34,8 +34,9 @@
 		button{
 			padding: 10px;
 		}
-		#dem span,#leng span{
+		span,b{
 			color:red;
+
 		}
 		.title{
 			margin-top: 0;
@@ -71,6 +72,7 @@
 			let sam = "";
 			var count = 0;
 			var m = 0;
+			if(n==0){n++;}
 			for(var i = p; i>n-1; i--){
 				for(var j = p; j>0; j--){
 					if(p%j==0){
@@ -99,7 +101,7 @@
 			sam.reverse();
 			document.getElementById("demo3").innerHTML = "Prime Numbers in between <b><span>"+doo+"</span></b>"+" & <b>"+ poo+ "</b> are : <b>" + sam +"</b>";
 
-			document.getElementById("leng").innerHTML = "Total Prime Number Count : <b><span>"+ count + "</span></b>";
+			document.getElementById("leng").innerHTML = "and total Prime Number Count : <b><span>"+ count + "</span></b>";
 		}
 	</script>
 
