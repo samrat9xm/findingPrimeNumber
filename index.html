@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/favicon.png">
+	<title>Finding Prime Number</title>
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+
+		div{
+			width: 70%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			text-align: center;
+		}
+
+		input{
+			padding: 10px;
+			font-size: 17px;
+			margin: 5px 0;
+			border:1px solid black;
+		}
+		button{
+			padding: 10px;
+		}
+		#dem span,#leng span{
+			color:red;
+		}
+		.title{
+			margin-top: 0;
+			text-align: center;
+			padding: 5px;
+			background: #353353;
+			color: #fff;
+		}
+		p{
+			margin: 10px 0;
+		}
+	</style>
+</head>
+<body>
+	<p class="title">Finding Prime Numbers</p>
+	<div>
+		<p>
+			<input placeholder="From" id="demo1" type="number"/>
+			<input placeholder="To" id="demo2" type="number"/>
+		</p>
+		<button onclick="check()">Check</button>
+		<p id="demo3">OUTPUT SHOWS HERE</p>
+		<p id="leng"></p>
+	</div>
+	<script>
+		function check(){
+			
+			let n = Number(document.getElementById("demo1").value);
+			let p = Number(document.getElementById("demo2").value);
+			let doo = n;
+			let poo = p;
+			let text = "";
+			let sam = "";
+			var count = 0;
+			var m = 0;
+			for(var i = p; i>n-1; i--){
+				for(var j = p; j>0; j--){
+					if(p%j==0){
+						if(j==1){
+							text+=j;
+							m =text.split(",").length;
+							if(m>=3){
+								text = "";
+								p--;
+								break;
+							}
+							else if(m==2){
+								sam += p + ",";
+								p--;
+								text = "";
+								count++;
+								break;
+							}
+						}
+						text+= j + ",";
+					}
+				}
+			}
+			sam = sam.split(",");
+			sam.pop();
+			sam.reverse();
+			document.getElementById("demo3").innerHTML = "Prime Numbers in between <b><span>"+doo+"</span></b>"+" & <b>"+ poo+ "</b> are : <b>" + sam +"</b>";
+
+			document.getElementById("leng").innerHTML = "Total Prime Number Count : <b><span>"+ count + "</span></b>";
+		}
+	</script>
+
+</body>
+</html>
