@@ -48,6 +48,10 @@
 		p{
 			margin: 10px 0;
 		}
+		#demo3 span{
+			color: blue;
+		}
+
 	</style>
 </head>
 <body>
@@ -58,7 +62,7 @@
 			<input placeholder="To" id="demo2" type="number"/>
 		</p>
 		<button onclick="check()">Check</button>
-		<p id="demo3">OUTPUT SHOWS HERE</p>
+		<p id="demo3"><span>Output shows here</span></p>
 		<p id="leng"></p>
 	</div>
 	<script>
@@ -107,7 +111,7 @@
 			sam = sam.split(",");
 			sam.pop();
 			sam.reverse();
-			document.getElementById("demo3").innerHTML = "Prime Numbers in between <b><span>"+doo+"</span></b>"+" & <b>"+ poo+ "</b> are : <b>" + sam +"</b>";
+			document.getElementById("demo3").innerHTML = "Prime Numbers in between <b><span>"+doo+"</span></b>"+" & <b><span>"+ poo+ "</span></b> are : <b>" + sam +"</b>";
 
 			document.getElementById("leng").innerHTML = "and total Prime Number Count : <b><span>"+ count + "</span></b>";
 		}
