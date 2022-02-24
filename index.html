@@ -55,15 +55,21 @@
 	</style>
 </head>
 <body>
-	<p class="title">Finding Prime Numbers</p>
+	<p class="title">মৌলিক সংখ্যা খুঁজো</p>
 	<div>
 		<p>
-			<input placeholder="From" id="demo1" type="number"/>
-			<input placeholder="To" id="demo2" type="number"/>
+			<input placeholder="প্রথম সংখ্যা" id="demo1" type="number"/>
+			<input placeholder="দ্বিতীয় সংখ্যা" id="demo2" type="number"/>
 		</p>
 		<button onclick="check()">Check</button>
-		<p id="demo3"><span>Output shows here</span></p>
+		<p id="demo3"><span>এখানে আউটপুট দেখাবে।</span></p>
 		<p id="leng"></p>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		এটি বানিয়েছেন <a href="https://samrat-portfolio.netlify.app/">Samrat</a></p>
 	</div>
 	<script>
 		function check(){
@@ -111,9 +117,9 @@
 			sam = sam.split(",");
 			sam.pop();
 			sam.reverse();
-			document.getElementById("demo3").innerHTML = "Prime Numbers in between <b><span>"+doo+"</span></b>"+" & <b><span>"+ poo+ "</span></b> are : <b>" + sam +"</b>";
+			document.getElementById("demo3").innerHTML = "<b><span>"+doo+"</span></b>"+" & <b><span>"+ poo+ "</span></b> এর মধ্যে মৌলিক সংখ্যাগুলো হলো : <b>" + sam +"</b>";
 
-			document.getElementById("leng").innerHTML = "and total Prime Number Count : <b><span>"+ count + "</span></b>";
+			document.getElementById("leng").innerHTML = "এবং মোট মৌলিক সংখ্যা <b><span>"+ count + "</span></b> টি।";
 		}
 	</script>
 
