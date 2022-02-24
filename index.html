@@ -73,6 +73,14 @@
 			var count = 0;
 			var m = 0;
 			if(n==0){n++;}
+			if(p==0){p++;}
+			if(n>p){
+				let c,d;
+				c=n;
+				d=p;
+				p=c;
+				n=d;
+			}
 			for(var i = p; i>n-1; i--){
 				for(var j = p; j>0; j--){
 					if(p%j==0){
