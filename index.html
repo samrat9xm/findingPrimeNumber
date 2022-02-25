@@ -74,14 +74,18 @@
 	<script>
 		function check(){
 			
-			let n = Number(document.getElementById("demo1").value);
-			let p = Number(document.getElementById("demo2").value);
+			let n = Number(document.getElementById("demo1").value);//get value from user
+			let p = Number(document.getElementById("demo2").value);//get value from user
 			let doo = n;
 			let poo = p;
 			let text = "";
 			let sam = "";
 			var count = 0;
 			var m = 0;
+			if(n<0||p<0){
+				alert("Please input positive number in both box!!!");
+				location.reload();
+			}
 			if(n==0){n++;}
 			if(p==0){p++;}
 			if(n>p){
