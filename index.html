@@ -15,13 +15,12 @@
 			box-sizing: border-box;
 			font-family: sans-serif;
 		}
+		
 
 		div{
-			width: 70%;
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%,-50%);
+			height: 100vh;
+			background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+			width: 100%;
 			text-align: center;
 		}
 
@@ -30,9 +29,6 @@
 			font-size: 17px;
 			margin: 5px 0;
 			border:1px solid black;
-		}
-		button{
-			padding: 10px;
 		}
 		span,b{
 			color:red;
@@ -51,12 +47,35 @@
 		#demo3 span{
 			color: blue;
 		}
+		
+		button {
+			border: none;
+			color: #090909;
+			padding: 0.7em 1.7em;
+			font-size: 18px;
+			border-radius: 0.5em;
+			background: #e8e8e8;
+			border: 1px solid #e8e8e8;
+			transition: all .3s;
+		}
+
+		button{
+			color: #666;
+			box-shadow: 4px 4px 12px #c5c5c5,
+			inset -4px -4px 12px #ffffff;
+		}
+		button:active{
+			box-shadow: inset 4px 4px 12px #c5c5c5,
+			inset -4px -4px 12px #ffffff;
+		}
 
 	</style>
 </head>
 <body>
-	<p class="title">মৌলিক সংখ্যা খুঁজো</p>
+
 	<div>
+		<p class="title">মৌলিক সংখ্যা খুঁজো</p>
+		<p>**Input two distinct numbers in the following box to check prime number(s) in between them**</p>
 		<p>
 			<input placeholder="প্রথম সংখ্যা" id="demo1" type="number"/>
 			<input placeholder="দ্বিতীয় সংখ্যা" id="demo2" type="number"/>
@@ -73,7 +92,7 @@
 	</div>
 	<script>
 		function check(){
-			
+
 			let n = Number(document.getElementById("demo1").value);//get value from user
 			let p = Number(document.getElementById("demo2").value);//get value from user
 			let doo = n;
