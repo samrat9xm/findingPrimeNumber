@@ -115,6 +115,10 @@
 				p=c;
 				n=d;
 			}
+			if (n==0) {
+				alert("please fill the box with non zero number");
+				location.reload();
+			}
 			for(var i = p; i>n-1; i--){
 				for(var j = p; j>0; j--){
 					if(p%j==0){
